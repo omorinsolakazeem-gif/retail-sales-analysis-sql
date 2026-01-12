@@ -43,8 +43,8 @@ CREATE TABLE retail_sales
 
 ### 2. Initial Data Inspection
 
-- **Preview Data: View first 10 rows.
-- **Total Records: Count all transactions.
+- **Preview Data**: View first 10 rows.
+- **Total Records**: Count all transactions.
 
 ```sql
 SELECT * FROM retail_sales
