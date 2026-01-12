@@ -1,29 +1,29 @@
-# Retail Sales Analysis SQL Project
+# SQL Retail Sales Analysis Project
 
 ## Project Overview
 
 **Project Title**: Retail Sales Analysis  
-**Level**: Beginner  
-**Database**: `p1_retail_db`
+**Database**: `sql_project_p2`
 
-This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries. This project is ideal for those who are starting their journey in data analysis and want to build a solid foundation in SQL.
+This project demonstrates SQL skills applied to a retail sales dataset. The analysis focuses on understanding customer behavior, purchase patterns, and product performance. The approach starts by profiling customers analyzing age, gender, and purchase behavior before moving into product and time-based sales insights.
 
 ## Objectives
 
-1. **Set up a retail sales database**: Create and populate a retail sales database with the provided sales data.
-2. **Data Cleaning**: Identify and remove any records with missing or null values.
-3. **Exploratory Data Analysis (EDA)**: Perform basic exploratory data analysis to understand the dataset.
-4. **Business Analysis**: Use SQL to answer specific business questions and derive insights from the sales data.
+1. **Set up a retail sales database**: Create and populate a table with transaction data.
+2. **Data Cleaning**: Identify and remove records with missing values to ensure analysis quality.
+3. **Exploratory Data Analysis (EDA)**: Gain insights into customers, products, and sales trends.
+4. **Business Analysis**: Answer business questions using SQL queries including customer profiling, category performance, and time-based sales.
 
 ## Project Structure
 
 ### 1. Database Setup
 
-- **Database Creation**: The project starts by creating a database named `p1_retail_db`.
+- **Database Creation**: The project starts by creating a database named `sql_project_p2`.
 - **Table Creation**: A table named `retail_sales` is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
 
+
 ```sql
-CREATE DATABASE p1_retail_db;
+CREATE DATABASE sql_project_p2;
 
 CREATE TABLE retail_sales
 (
@@ -41,29 +41,33 @@ CREATE TABLE retail_sales
 );
 ```
 
-### 2. Data Exploration & Cleaning
+### 2. Initial Data Inspection
 
-- **Record Count**: Determine the total number of records in the dataset.
-- **Customer Count**: Find out how many unique customers are in the dataset.
-- **Category Count**: Identify all unique product categories in the dataset.
-- **Null Value Check**: Check for any null values in the dataset and delete records with missing data.
+- **Preview Data: View first 10 rows.
+- **Total Records: Count all transactions.
 
 ```sql
-SELECT COUNT(*) FROM retail_sales;
-SELECT COUNT(DISTINCT customer_id) FROM retail_sales;
-SELECT DISTINCT category FROM retail_sales;
-
 SELECT * FROM retail_sales
-WHERE 
-    sale_date IS NULL OR sale_time IS NULL OR customer_id IS NULL OR 
-    gender IS NULL OR age IS NULL OR category IS NULL OR 
-    quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
+LIMIT 10;
+SELECT 
+    COUNT(*)
+FROM retail_sales
+
+### 3. Data Cleaning
+
+- **Identify missing values: Check for incomplete records.
+- **Remove incomplete records: Delete any rows with null values in key fields.
+
+```sql
+SELECT * FROM retail_sales
+WHERE transactions_id IS NULL OR sale_date IS NULL OR sale_time IS NULL
+      OR gender IS NULL OR age IS NULL OR category IS NULL
+      OR quantiy IS NULL OR cogs IS NULL OR total_sale IS NULL;
 
 DELETE FROM retail_sales
-WHERE 
-    sale_date IS NULL OR sale_time IS NULL OR customer_id IS NULL OR 
-    gender IS NULL OR age IS NULL OR category IS NULL OR 
-    quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
+WHERE transactions_id IS NULL OR sale_date IS NULL OR sale_time IS NULL
+      OR gender IS NULL OR age IS NULL OR category IS NULL
+      OR quantiy IS NULL OR cogs IS NULL OR total_sale IS NULL;
 ```
 
 ### 3. Data Analysis & Findings
