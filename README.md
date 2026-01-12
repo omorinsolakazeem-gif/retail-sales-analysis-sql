@@ -71,22 +71,30 @@ WHERE transactions_id IS NULL OR sale_date IS NULL OR sale_time IS NULL
       OR quantiy IS NULL OR cogs IS NULL OR total_sale IS NULL;
 ```
   
-### D. Exploratory Data Analysis (Customer-Centric)
-Since understanding customers is critical, the analysis starts by profiling who the customers are and their purchasing patterns:
-
-- **Total sales transactions**:
+### D. Exploratory Data Inspection
+- **Record Count**: What is the total volume of sales transactions recorded?
 
 ```sql
-SELECT COUNT(*) AS total_sales FROM retail_sales;
+SELECT COUNT(*) AS total_sales
+FROM retail_sales;
 ```
 
-- **Distinct Customers**:
+- **Customer Count**: What is the total number of distinct customers?
 
 ```sql
-SELECT COUNT(DISTINCT customer_id) AS total_customers FROM retail_sales;
+SELECT COUNT(DISTINCT customer_id) AS total_customers
+FROM retail_sales;
 ```
 
-The following SQL queries were developed to answer specific business questions:
+- **Distinct Categories**: Which distinct product categories are represented in the dataset?
+
+```sql
+SELECT DISTINCT category
+FROM retail_sales;
+```
+
+### E. Business Analysis 
+The business analysis begins with customer-focused questions to understand who the customers are and how they behave. Starting with consumer-centric queries helps inform subsequent analysis on products, revenue, and sales trends.
 
 1. **Which 5 customers generated the highest total sales revenue**? 
 
