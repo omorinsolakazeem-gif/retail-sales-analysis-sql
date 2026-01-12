@@ -269,21 +269,25 @@ ORDER BY total_orders DESC;
 
 ## Key Findings
 
-- **Customer Demographics**: The dataset includes customers from various age groups, with sales distributed across different categories such as Clothing and Beauty.
-- **High-Value Transactions**: Several transactions had a total sale amount greater than 1000, indicating premium purchases.
-- **Sales Trends**: Monthly analysis shows variations in sales, helping identify peak seasons.
-- **Customer Insights**: The analysis identifies the top-spending customers and the most popular product categories.
+- **Customer Preferences**: Clothing is the most frequently ordered category across both genders, with men purchasing more clothing items than women.
+- **Revenue Drivers**: Electronics generate the highest revenue, even though they are not the most frequently purchased category.
+- **High-Value Orders**: A significant number of transactions exceed 1000 in total sale. These orders are likely concentrated among loyal or premium customers and often involve electronics or bundled products.
+- **Time of Orders**: Most orders occur in the evening, followed by the morning, while the afternoon sees the fewest orders.
+- **Age Group Trends**: The majority of orders come from the mid-age group (41–60), whereas seniors (61+) place the fewest orders.
 
 ## Recommendations
+Based on the insights derived from the analysis, the following strategies are recommended:
 
 - **Target marketing**: Focus promotions on mid-age customers and men for Clothing.
 - **Revenue Strategy**: Prioritize Electronics for higher revenue per transaction.
-- **Time-based campaigns**: RRun campaigns during peak order times in the evening.
+- **Time-based campaigns**: Run campaigns during peak order times in the evening.
 - **Customer retention**: Reward top customers and encourage repeat purchases from other age groups.
 
 ## Conclusion
 
-This project demonstrates SQL skills applied to retail sales analysis, beginning with customer insights, moving to product trends, and finally examining time-based sales patterns. The findings can help businesses make data-driven decisions on marketing, inventory, and sales strategy.
+This project demonstrates the use of SQL to analyze retail sales data, starting with customer-focused insights, progressing to product and category performance, and concluding with time-based sales patterns.
+
+The analysis provides a clear understanding of customer behavior and purchasing trends. These insights can be used to support targeted marketing, optimize inventory decisions, and maximize revenue by aligning strategies with customer segments, category performance, and peak ordering times.
 
 
 This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
